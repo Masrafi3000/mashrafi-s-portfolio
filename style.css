@@ -1,0 +1,432 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #080808;
+    color: #fff;
+}
+
+/* Header Section */
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(picture/bg.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    padding: 10px 10%;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.header-text {
+    margin-top: 0%;
+    font-size: 30px;
+}
+
+.header-text h1 {
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+.header-text h1 span {
+    color: #ff004f;
+}
+
+/* About Section */
+#about {
+    padding: 80px 10%;
+    color: #ababab;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1 {
+    flex: 1;
+    max-width: 40%;
+}
+
+.about-col-1 img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.about-col-2 {
+    flex: 1;
+    max-width: 55%;
+    padding-left: 40px;
+}
+
+.sub-title {
+    font-size: 36px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.about-col-2 h3 {
+    color: #ff004f;
+    margin-top: 10px;
+}
+
+.about-col-2 ul {
+    list-style: none;
+}
+
+.about-col-2 ul li {
+    margin: 5px 0;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+/* Projects Section */
+#projects {
+    padding: 80px 10%;
+    color: #fff;
+    background: #111;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.project-card {
+    background: #222;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 30%;
+    transition: 0.3s;
+    box-shadow: 0 0 10px rgba(255, 0, 79, 0.5);
+    text-decoration: none;
+    color: #fff;
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.project-card h3 {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #ff004f;
+}
+
+.project-card p {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #ddd;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(255, 0, 79, 0.7);
+}
+
+.gallery-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.gallery-row {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.big-row {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.big-row .gallery-item {
+    flex: 1;
+    max-width: 50%; /* Ensures two images fill the row equally */
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 300px; /* Keeps all images uniform in size */
+    height: 200px;
+}
+
+.big-row .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+
+.contact-section {
+    background: linear-gradient(135deg, #2a2a2a, #1a1a1a); /* Dark, clean gradient */
+    color: #fff; /* White text */
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 600px;
+    margin: 30px auto;
+    font-family: 'Poppins', sans-serif; /* Modern font for a professional look */
+}
+
+.contact-header {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #fff; /* "Get in Touch" in white */
+}
+
+.contact-subheader {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #dddddd; /* Subheader text in a soft gray */
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-align fields perfectly */
+    gap: 15px; /* Consistent spacing */
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px 15px;
+    font-size: 1rem;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background: #f9f9f9; /* Light background for input fields */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    transform: scale(1.02); /* Slightly enlarge */
+    box-shadow: 0 4px 15px rgba(255, 111, 97, 0.5); /* Glow effect */
+}
+
+textarea {
+    min-height: 120px;
+    resize: none;
+}
+
+.submit-btn {
+    background: #ff3333; /* "Send Message" button in red */
+    color: #fff; /* White text on button */
+    padding: 10px 25px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(255, 51, 51, 0.5); /* Slight red shadow */
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background: #e60000; /* Darker red on hover */
+    transform: translateY(-3px); /* Lift effect */
+}
+
+.social-media {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    font-size: 1.5rem;
+    padding: 10px;
+    color: #fff; /* White icons */
+    border-radius: 50%;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.social-icon.facebook:hover {
+    background: #3b5998; /* Facebook blue */
+    transform: scale(1.1);
+}
+
+.social-icon.github:hover {
+    background: #333; /* GitHub black */
+    transform: scale(1.1);
+}
+
+.social-icon.linkedin:hover {
+    background: #0077b5; /* LinkedIn blue */
+    transform: scale(1.1);
+}
+.social-media {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icon img {
+    border-radius: 50%; /* Circle icons for a polished look */
+    transition: transform 0.3s, box-shadow 0.3s ease;
+}
+
+.social-icon img:hover {
+    transform: scale(1.2); /* Slight zoom effect */
+    box-shadow: 0 4px 15px rgba(255, 111, 97, 0.5); /* Accent shadow */
+}
+
+
+#extracurricular {
+    background: linear-gradient(135deg, #121212, #1a1a1a); /* Dark gradient matching portfolio theme */
+    padding: 50px 20px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: #fff; /* White text for better contrast */
+}
+
+.sub-title {
+    font-size: 2.5rem;
+    color: #ff6f61; /* Accent color for header */
+    margin-bottom: 10px;
+}
+
+.section-description {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #ddd; /* Soft gray for subheader */
+}
+
+.activities-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.activity-card {
+    background: #202020; /* Dark card background */
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(255, 111, 97, 0.3); /* Accent shadow to match red theme */
+    width: 280px;
+    overflow: hidden;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.activity-card:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 0 8px 25px rgba(255, 111, 97, 0.5); /* Brighter shadow for hover */
+}
+
+.activity-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover; /* Consistent image sizing */
+}
+
+.activity-card h3 {
+    font-size: 1.5rem;
+    margin: 15px;
+    color: #ff6f61; /* Accent color for headings */
+}
+
+.activity-card p {
+    font-size: 1rem;
+    margin: 15px;
+    color: #ccc; /* Light gray for text */
+}
+
+@media (max-width: 768px) {
+    .activities-container {
+        flex-direction: column; /* Stack cards on smaller screens */
+        gap: 15px;
+    }
+
+    .activity-card {
+        width: 100%; /* Make cards full width on small screens */
+    }
+}
+.social-media-links {
+    display: flex;
+    justify-content: center; /* Centers the icons horizontally */
+    gap: 20px; /* Adds spacing between the logos */
+    margin-top: 20px; /* Adds space above the logos */
+}
+
+.social-media-links a img {
+    border-radius: 50%; /* Makes the logos circular */
+    transition: transform 0.3s, box-shadow 0.3s ease; /* Adds smooth hover effects */
+}
+
+.social-media-links a img:hover {
+    transform: scale(1.2); /* Slight zoom effect on hover */
+    box-shadow: 0 4px 15px rgba(255, 111, 97, 0.5); /* Adds a soft shadow on hover */
+}
+
+
